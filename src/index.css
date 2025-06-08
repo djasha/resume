@@ -1,0 +1,95 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 220 20% 98%;
+  --foreground: 220 15% 15%;
+  --card: 0 0% 100%;
+  --card-foreground: 220 15% 15%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 220 15% 15%;
+  --primary: 262 83% 58%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 220 14% 96%;
+  --secondary-foreground: 220 15% 25%;
+  --muted: 220 14% 96%;
+  --muted-foreground: 220 15% 46%;
+  --accent: 220 14% 96%;
+  --accent-foreground: 220 15% 25%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 220 13% 91%;
+  --input: 220 13% 91%;
+  --ring: 262 83% 58%;
+  --radius: 0.5rem;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: hsl(var(--foreground));
+  font-feature-settings: "rlig" 1, "calt" 1;
+  min-height: 100vh;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.resume-preview {
+  background: white;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.modern-template {
+  font-family: 'Inter', sans-serif;
+}
+
+.classic-template {
+  font-family: 'Times New Roman', serif;
+}
+
+.creative-template {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Custom styles for TabsTrigger text color */
+[data-radix-collection-item] {
+  color: white !important; /* Ensure text is white */
+}
+
+[data-state='active'][data-radix-collection-item] {
+  color: white !important; /* Ensure active text is white */
+  background-color: rgba(255, 255, 255, 0.2) !important; /* Slightly more prominent active background */
+}
+
+[data-state='inactive'][data-radix-collection-item]:hover {
+  background-color: rgba(255, 255, 255, 0.15) !important; /* Hover effect for inactive tabs */
+}
+
+
+@media print {
+  body {
+    background: white !important;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+}
